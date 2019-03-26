@@ -2,15 +2,15 @@ def reverse_compliment_calculator():
     
     # Takes an input and checks that it only contains a, t, g and c.
     
-    x = False
-    while x == False:
+    while True:
         oligo = input('Please enter oligo sequence').lower()
         accept = set('atgc')
         if set(oligo).issubset(accept):
-            x = True
+            break
         else:
             print('Oligos may only contain a, t, g and c. Please check oligo sequence and try again')
-            
+            continue
+
     # Reverses the input        
     
     oligo_rev = oligo[::-1]
